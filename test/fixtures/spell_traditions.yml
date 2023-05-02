@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spell: one
+  tradition: one
+
+two:
+  spell: two
+  tradition: two

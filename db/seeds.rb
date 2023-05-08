@@ -32,3 +32,44 @@ schools_of_magic = [
 schools_of_magic.each do |school|
   School.find_or_create_by(name: school[:name], description: school[:description])
 end
+
+# spells = [
+#   {
+#     name: 'Spell Name',
+#     level: 1,
+#     description: 'Spell description',
+#     casting_time: 'Casting time',
+#     range: 'Range',
+#     target: 'Target',
+#     duration: 'Duration',
+#     saving_throw: 'Saving throw',
+#     spell_resistance: 'Spell resistance',
+#     tradition: 'Arcane',
+#     school: 'Evocation',
+#     components: ['Verbal', 'Somatic']
+#   },
+#   # Add more spells here
+# ]
+
+# spells.each do |spell_data|
+#   tradition = Tradition.find_by(name: spell_data[:tradition])
+#   school = School.find_by(name: spell_data[:school])
+#   components = spell_data[:components].map { |component_name| Component.find_by(name: component_name) }
+
+#   spell = Spell.find_or_create_by(name: spell_data[:name]) do |spell|
+#     spell.level = spell_data[:level]
+#     spell.description = spell_data[:description]
+#     spell.casting_time = spell_data[:casting_time]
+#     spell.range = spell_data[:range]
+#     spell.target = spell_data[:target]
+#     spell.duration = spell_data[:duration]
+#     spell.saving_throw = spell_data[:saving_throw]
+#     spell.spell_resistance = spell_data[:spell_resistance]
+#     spell.tradition = tradition
+#     spell.school = school
+#   end
+
+#   components.each do |component|
+#     SpellComponent.find_or_create_by(spell: spell, component: component)
+#   end
+# end
